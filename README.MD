@@ -9,12 +9,12 @@
 
 #### Connect To DB
 
-- [] get connection string
-- [] setup .env with MONGO_URL variable and assign the value
-- [] import 'dotenv' and setup package
-- [] import connect() and invoke in the starter
-- [] restart the server
-- [] mongoose V7 info
+- [x] get connection string
+- [x] setup .env with MONGO_URL variable and assign the value
+- [x] import 'dotenv' and setup package
+- [x] import connect() and invoke in the starter
+- [x] restart the server
+- [x] mongoose V7 info
 
 #### Basic Routes and Middleware
 
@@ -362,7 +362,7 @@
 - [] add dev command "nodemon app.js"
 - [] change start to "node app.js"
 - [] setup node version in package.json
-- [] "engines": {"node": "14.x"}
+- [] "engines": {"node": "18.x"}
 - [] Procfile "web: node app.js"
 - [] remove existing git repo
 - [] rm -rf .git - mac,
