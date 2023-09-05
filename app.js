@@ -9,6 +9,7 @@ const app = express();
 const morgan = require('morgan');
 const cookieParser = require('cookie-parser');
 const cors = require('cors');
+const fileUpload = require('express-fileupload');
 
 // database 
 const connectDB = require('./db/connect');
@@ -24,8 +25,12 @@ const errorHandlerMiddleware = require('./middleware/error-handler');
 
 app.use(morgan('tiny'));
 app.use(cors());
+
 app.use(express.json());
 app.use(cookieParser(process.env.JWT_SECRET));
+
+app.use(express.static('./public'));
+app.use(fileUpload());
 
 app.get('/', (req, res) => {
     res.send('e-commerce-api');
