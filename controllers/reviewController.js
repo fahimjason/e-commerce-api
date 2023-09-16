@@ -86,6 +86,7 @@ const deleteReview = async (req, res) => {
     checkPermissions(req.user, review.user);
 
     await review.deleteOne();
+    // await Review.calculateAverageRating(review.product)
 
     res.status(StatusCodes.OK).json({ msg: 'Success! Review removed' });
 };
